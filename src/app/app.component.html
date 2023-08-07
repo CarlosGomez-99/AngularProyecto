@@ -1,0 +1,71 @@
+<h1>*ngIf</h1>
+<input type="text" [(ngModel)]="person.name" />
+<p *ngIf="person.name === 'carlos' && person.age === 23 ; else myBlock">Hola soy Carlos</p>
+<p *ngIf="person.name === 'fabian'">Hola soy Fabian</p>
+<ng-template #myBlock>
+    <p>Bloque de else</p>
+</ng-template>
+<hr>
+<h1>NgModel</h1>
+<p>Nombre: {{person.name}}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" />
+<p>Valido: {{nameInput.valid}}</p>
+<p>Nombre: {{person.age}}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age" />
+<p>Valido: {{ageInput.valid}}</p>
+<hr>
+<h1>Eventos</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)=" toggleButton()">Toglle Button</button>
+<p>Edad: {{person.age}}</p>
+<button (click)=" increaseAge()">Age Add</button>
+<div class="box" (scroll)="onScroll($event)">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur voluptatem ipsa voluptate corporis modi,
+    saepe sit iusto amet inventore eius excepturi delectus distinctio. Doloremque corporis, odit officia inventore, quo
+    tenetur nostrum eum repudiandae deserunt, porro optio rerum! Impedit dolorum neque recusandae ducimus facilis
+    tempore consequuntur quia deleniti facere, quos reprehenderit commodi quam quibusdam vel unde aliquam beatae. Saepe
+    deserunt odio necessitatibus, beatae error natus. Harum ullam laborum laudantium dolore perspiciatis. Enim labore
+    nemo deleniti dolore dolores tempora necessitatibus amet nihil laudantium magnam maxime, ipsam asperiores eum culpa
+    blanditiis reiciendis cupiditate odit cumque ducimus sunt? Reiciendis, iste numquam? Doloremque nesciunt sit ex nisi
+    nostrum cupiditate atque porro incidunt aliquid! Ad dolorem necessitatibus deleniti reiciendis aperiam itaque atque
+    fuga, ducimus quis quae, quaerat accusamus quisquam nesciunt porro. Ex ipsam molestias nam. Omnis dignissimos quas
+    repudiandae asperiores! Velit repudiandae modi a hic rerum veritatis, cum necessitatibus repellat, nihil tempore vel
+    totam maxime sit molestiae adipisci harum dolore animi iure fugit unde! Ipsam quibusdam provident quam at dolor.
+    Repellendus consectetur impedit quo quae, quia autem odit tempore quisquam minus fuga labore quidem provident
+    dolorem explicabo ea deleniti. Rem dignissimos necessitatibus quia dolores amet sunt nostrum quisquam commodi
+    assumenda, dolorum facere suscipit explicabo nobis maxime omnis molestias corrupti doloremque impedit distinctio vel
+    debitis illum cum perferendis! Deleniti molestias corporis impedit ullam? Veritatis voluptates facilis rerum
+    accusamus expedita labore eaque debitis placeat atque vitae. Porro est quaerat ut ducimus ea sequi excepturi nisi
+    doloribus earum. Aperiam eveniet molestiae maiores officia dolore, deserunt iste at consectetur temporibus dolor
+    unde quidem. Voluptas necessitatibus inventore nulla tempora veritatis eum nemo facilis! Laboriosam, molestias
+    distinctio praesentium voluptatibus sequi, at temporibus nostrum dignissimos ut, eaque cupiditate labore architecto
+    tempora eius quo saepe quas. Nisi hic ratione eos corrupti harum nostrum perspiciatis ad consequatur explicabo atque
+    expedita maiores, inventore labore repellendus distinctio omnis fugit eius odit quod totam in? Animi, facere! Id
+    quia voluptates repellat incidunt esse quasi eaque ratione voluptatibus quas! Cupiditate perferendis ullam vel
+    explicabo. Veritatis accusamus dolor cupiditate nesciunt ratione illo quod error ab architecto ea nam in maiores
+    consectetur natus porro dolores recusandae sequi et quibusdam, quidem exercitationem animi enim! Non in quod commodi
+    soluta aspernatur. Ullam animi maiores, reprehenderit, tempore harum nesciunt facilis repellat quos eveniet magnam
+    voluptates. Suscipit, id nostrum totam, odio excepturi veniam aut iste sit maxime ex sapiente eum! A, sapiente
+    error. Accusantium, itaque rem. Impedit eveniet ipsam at molestias vel laboriosam excepturi quod minus. Maxime quos
+    quis sit totam officiis dignissimos et. Officia veniam ducimus, quae error maxime placeat enim, ipsam, iste autem
+    accusantium dicta dolorem velit sunt voluptate possimus repudiandae ullam vel atque ab cumque ex odio. Voluptas,
+    nesciunt provident tempore sit quos dolor deserunt ducimus quod, explicabo atque pariatur dolore eaque recusandae?
+    Vero commodi ex velit odio assumenda! Nesciunt laudantium architecto sequi. Labore, magni. Asperiores accusantium
+    quam recusandae quisquam cupiditate nemo qui laboriosam sequi natus laborum nesciunt voluptatum placeat, explicabo
+    expedita deleniti sunt beatae! Tempora tempore laborum vitae beatae sapiente ipsam laboriosam, labore nihil officiis
+    natus aspernatur autem blanditiis eos sint?
+</div>
+<p>Nombre: {{person.name}}</p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)" />
+<hr>
+<h1>Propiedades</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<input type="text" [value]="person.name">
+<progress max="100" [value]="person.age"></progress>
+<img [src]="person.avatar" alt="" width="200px">
+<hr>
+<h1>Hola Mundo</h1>
+<h2>{{'Hola Mundo'.repeat(5)}}</h2>
+<p>3 + 3 = {{3 + 3}}</p>
+<h3>Hola, soy {{name}} y tengo {{age}} años</h3>
+<img src={{image}} alt="imagen">
