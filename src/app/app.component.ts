@@ -21,8 +21,13 @@ export class AppComponent {
   }
 
   newName = '';
-  names: String[] =['Carlos', 'Jaime', 'Doris', 'Diego', 'Adriana', 'Juan']
-  emojis: String[] =  [ '😂' , '🐦', '🐳','🌮', '💚', '😍', '👌', '😁', '😒', '👍']
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  };
+  names: String[] = ['Carlos', 'Jaime', 'Doris', 'Diego', 'Adriana', 'Juan']
+  emojis: String[] = ['😂', '🐦', '🐳', '🌮', '💚', '😍', '👌', '😁', '😒', '👍']
   products: Product[] = [
     {
       name: 'EL mejor juguete',
@@ -75,16 +80,16 @@ export class AppComponent {
     this.person.name = element.value;
   }
 
-  getRamdomEmoji(){
+  getRamdomEmoji() {
     return Math.floor(Math.random() * this.emojis.length)
   }
 
-  addName(){
+  addName() {
     this.names.push(this.newName);
     this.newName = '';
   }
 
-  deleteName(index: number){
-    this.names.splice(index,1);
+  deleteName(index: number) {
+    this.names.splice(index, 1);
   }
 }

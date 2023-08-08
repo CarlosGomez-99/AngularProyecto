@@ -37,6 +37,19 @@
     }
 }
 
+.line-error {
+    height: 0;
+    border-bottom: 5px solid;
+
+    &.invalid {
+        border-color: red;
+    }
+
+    &.valid {
+        border-color: green;
+    }
+}
+
 //Tablets
 @media screen and (min-width: 40em) {
     .products--grid {
