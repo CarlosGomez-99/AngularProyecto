@@ -21,6 +21,22 @@
     }
 }
 
+.style-dinamyic-width {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.message-error {
+    background-color: red;
+    color: white;
+    opacity: 0;
+    transition: all linear .5s;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
 //Tablets
 @media screen and (min-width: 40em) {
     .products--grid {

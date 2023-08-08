@@ -8,6 +8,7 @@ import { Product } from './product.models';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10;
   title = 'my-store';
   name = 'Carlos';
   age = 23;
